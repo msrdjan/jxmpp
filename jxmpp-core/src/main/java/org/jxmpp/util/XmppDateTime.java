@@ -125,7 +125,7 @@ public class XmppDateTime {
 			FORMATTER = new ThreadLocal<DateFormat>() {
 				@Override
 				protected DateFormat initialValue() {
-					DateFormat dateFormat = new SimpleDateFormat(FORMAT_STRING);
+					DateFormat dateFormat = new SimpleDateFormat(FORMAT_STRING, Locale.US);
 					dateFormat.setTimeZone(TIME_ZONE_UTC);
 					return dateFormat;
 				}
